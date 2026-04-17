@@ -76,3 +76,14 @@ console.log(validateUser({ name: "Anonim", email: "invalid-email", age: 25 })); 
 console.log(validateUser({ name: "Aida", email: "aida@test.com", age: 15 })); // false
 
 
+// Why do we use const for objects even if we plan to change their properties?
+    // Penggunaan const digunakan supaya tidak ada duplikat mendefinisian suatu objek, 
+    // meskipun nantinya properti dari objek tsb diubah-ubah
+
+
+// What is the difference between == and ===? Which one did you use in validateUser and why?
+    // == adalah equal digunakan untuk mencocokan value
+    // ==== adalah strict equal digunakan untuk mencocokkan value & data type
+
+// How did you check if the email string contains an "@"?
+    // menggunakan ".includes"
