@@ -1,134 +1,64 @@
-# QA Automation
+# 🚀 20-Day PIP Roadmap
+## 🎯 Goal
 
-Automated End-to-End (E2E) testing platform. Built with **Playwright** and **TypeScript** to ensure messaging reliability, broadcast template integrity, and UI consistency.
+### Rebuild technical foundations from zero → Playwright proficiency
 
-## 🛠️ Technology Stack
-
-- **Framework**: [Playwright](https://playwright.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Environment Management**: dotenv
-- **CI/CD Ready**: Automated reporting and failure screenshots.
-
-## 📋 Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- npm or yarn
-
-## ⚙️ Installation
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Install Playwright browsers:
-   ```bash
-   npx playwright install
-   ```
-
-## 🔐 Configuration
-
-Create a `.env` file in the root directory based on `.env.example`:
-
-```env
-TEST_USERNAME=your_username
-TEST_PASSWORD=your_password
-BASE_URL=https://app.test.id
-```
-
-## 🧪 Running Tests
-
-### Execute all tests
-```bash
-npx playwright test
-```
-
-### Run tests for specific feature (e.g., Broadcast)
-```bash
-npx playwright test tests/feature/
-```
-
-### Run tests in UI mode
-```bash
-npx playwright test --ui
-```
-
-### View HTML Report
-```bash
-npx playwright show-report
-```
-
-## 🎯 Running Tests Individually
-
-### Run a specific test file
-```bash
-npx playwright test tests/feature/filter.spec.ts
-```
-
-### Run a specific test suite (describe block)
-```bash
-npx playwright test tests/feature/filter.spec.ts -g 
-```
-
-### Run a single test case by name
-```bash
-npx playwright test tests/feature/filter.spec.ts -g 
-```
-
-### Run tests in headed mode (visible browser)
-```bash
-npx playwright test tests/feature/test.spec.ts --headed
-```
-
-### Run tests in debug mode
-```bash
-npx playwright test tests/feature/test.spec.ts --debug
-```
-
-### Run tests with specific browser
-```bash
-npx playwright test tests/feature/test.spec.ts --project=chromium
-npx playwright test tests/feature/test.spec.ts --project=firefox
-npx playwright test tests/feature/test.spec.ts --project=webkit
-```
-
-### Run tests with trace enabled
-```bash
-npx playwright test tests/feature/test.spec.ts --trace on
-```
-
-### Combining Options
-```bashin headed mode with trace
-npx playwright test tests/feature/test.spec.ts -g "TC-CF-007" --headed --trace on
-
-# Run test suite in debug mode
-npx playwright test tests/feature/test.spec.ts -g "Channel Filter" --debug
-```
+📏 Rules
+❌ No AI code generators
+✅ Only use official docs (MDN / Playwright docs)
 
 
-## 📁 Project Structure
+## 🧱 Phase 1: Back to Fundamentals (Days 1–5)
 
-- `tests/`: Test specifications grouped by feature.
-- `src/pages/`: Page Object Models (POM) for encapsulated UI logic.
-- `docs/`: Comprehensive test case documentation and debugging guides.
-- `playwright.config.ts`: Main framework configuration.
+**Focus:**
+- Vanilla JavaScript
+- DOM Tree
+- Manual element selection
 
-## 📊 Test Dashboard
+**Goal:**
+Write a script to automate a form using Chrome Console only (no Playwright)
 
-A beautiful, real-time dashboard to visualize test results is included. After running tests, a JSON report is automatically generated.
+**Outcome:**
+Understand what Playwright actually does under the hood
 
-### Open Dashboard
-```bash
-npm run dashboard
-```
+## 🛡️ Phase 2: The Safety Net (Days 6–10)
 
-### Dashboard Features
-- **KPI Cards**: Total tests, passed, failed, pass rate
-- **Suite Breakdown**: Expandable test suites with individual results
-- **Trend Chart**: Pass rate over last 10 runs
-- **Failure Details**: Click failed tests to see error messages and stack traces
-- **Filtering**: Filter by status (Passed/Failed/Flaky) or search by test name
+**Focus:**
+- TypeScript migration
+- Interfaces
+- Strict typing
 
-The dashboard uses demo data by default. Run your tests to generate real data in `dashboard/history/`.
+**Goal:**
+Refactor Phase 1 scripts into TypeScript
+Fix all "implicit any" errors
 
----
+**Outcome:**
+Understand why TypeScript matters (catch errors before runtime)
+
+## 🛠️ Phase 3: The Tool (Days 11–15)
+
+**Focus:**
+Mapping DOM knowledge → Playwright API
+Async/Await patterns
+
+**Goal:**
+Convert Console scripts into Playwright scripts
+
+**Outcome:**
+- Understand:
+- await & Promises
+- Locators vs raw selectors
+
+## 🌍 Phase 4: The Real World (Days 16–20)
+
+**Focus:**
+- Debugging
+- Flakiness
+- Performance
+- Code traps
+
+**Goal:**
+Complete the "Broken Code" Challenge
+
+**Outcome:**
+Independent debugging capability
